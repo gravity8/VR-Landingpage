@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+*,
+*::before,
+*::after
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #171115;
+    font-family: Montserrat;
+    color: seashell;
+}
+body::before,body::after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    width:15rem;
+    aspect-ratio: 1/1;
+    z-index:-1;
+    filter: blur(50px);
+    background-color: #650859;
+}
+body::before{
+    top: -5rem;
+    left: -5rem;
+}
+body::after{
+    top: unset;
+    left: unset;
+    bottom: -5rem;
+    right:-5rem;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    padding-top: 1rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+header img{
+    width:5rem;
+}
+header nav{
+    display: flex;
+    gap: .5rem;
+}
+header nav a{
+    text-decoration: none;
+    color: inherit;
+    justify-content: space-between;
+    align-items: center;
+    font-size:.9rem;
+    text-transform: capitalize;
+    border-radius: 100vw;
+    padding: .5rem 1rem;
+    transition: .3s ease;
+}
+header nav a:hover, .active{
+    background-color: #7522a2;
+}
+.mainimg{
+    position: absolute;
+    bottom: 0;
+    right:3rem;
+    width: 37rem;
+}
+.dots{
+    position: absolute;
+    top:0;
+    right:0;
+    width:8rem;
+}
+.leftdots{
+    position: absolute;
+    top:unset;
+    right:unset;
+    bottom: 0;
+    left:0;
+    width:8rem;
+}
+.side{
+    width:10rem;
+    height:100vh;
+    position: absolute;
+    top: 0%;
+    left:0%;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-around;
+    z-index: 1;
+}
+.side p{
+    writing-mode: vertical-rl;
+    margin-block: 2rem;
+}
+.side .arrow{
+    width: 2rem;
+    animation: updown 0.5s linear infinite alternate;
+}
+@keyframes updown {
+    100%{
+        transform: translateY(3rem);
+    }
+}
+.side .socialicons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.side .socialicons ion-icon{
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #650859;
+    padding:.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.side .socialicons ion-icon:hover{
+    background-color: #650859;
+    color: #fff;
+}
+section{
+    position:absolute;
+    inset:0;
+    display: flex;
+    align-items: center;
+}
+section .content{
+    padding-left: 10%;
+}
+section .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    position:relative;
+}
+section .content h1::before,section .content h1::after{
+    content:'';
+    position:absolute;
+    width: 3rem;
+    aspect-ratio:1/1;
+    background: url(./img/rounded-star.png) center center/ cover;
+    top:-2rem
+}
+
+section .content h1::after{
+    top:unset;
+    bottom:-3rem;
+
+}
+section .content .buttonholder{
+    display:flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+section .content .buttonholder button{
+    background: transparent;
+    border-radius: 100vw;
+    color: seashell;
+    border: 2px solid #7522a2;
+    padding: .5rem 1.5rem;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+section .content .buttonholder button:hover{
+    background: #7522a2;
+}
+section .content p{
+    font-size: .8rem;
+    width:70%;
+}
